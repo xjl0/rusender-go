@@ -1,3 +1,5 @@
+[![Tests](https://github.com/xjl0/rusender-go/actions/workflows/go-test.yml/badge.svg)](https://github.com/xjl0/rusender-go/actions/workflows/go-test.yml)
+
 # Неофициальный клиент для API RuSender на Go 
 
 Неофициальный Go-клиент для интеграции с API сервиса [RuSender](https://rusender.ru/) (сервиса отправки email-рассылок). Этот клиент позволяет легко и быстро отправлять письма через API Rusender, используя Go.
