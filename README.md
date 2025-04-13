@@ -27,34 +27,35 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/google/uuid"
-	"net/http"
 	"github.com/xjl0/rusender-go"
+	"net/http"
 )
 
 func main() {
-	client := rusender.NewClient(&http.Client{}, "your_api_key")
+	client := rusender.NewClient(&http.Client{}, "api_key")
 	answer, err := client.Send(context.Background(), rusender.Message{
-		IdempotencyKey: uuid.New().String(),
+		IdempotencyKey: "12456",
 		Mail: rusender.Mail{
 			To: rusender.Contact{
 				Email: "example@example.com",
-				Name:  "Example",
+				Name:  "example",
 			},
 			From: rusender.Contact{
 				Email: "example2@example.com",
-				Name:  "Example2",
+				Name:  "example2",
 			},
-			Subject:            "Subject",
-			IdTemplateMailUser: 1234,
+			Subject: "Test",
+			Html:    "<h1>Test</h1>",
 		},
 	})
 	if err != nil {
-		panic(err)
+		fmt.Printf("error: %s", err)
+		return
 	}
 
 	fmt.Printf("answer uuid: %s", answer.Uuid)
 }
+
 ```
 
 ## Использование
