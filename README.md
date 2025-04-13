@@ -19,7 +19,7 @@ https://rusender.ru/developer/api/email/
 ## Установка
 
 ```bash
-go get github.com/xjl0/rusender
+go get github.com/xjl0/rusender-go
 ```
 
 ## Пример использования
