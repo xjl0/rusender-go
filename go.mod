@@ -1,4 +1,4 @@
-module rusender
+module github.com/xjl0/rusender-go
 
 go 1.23
 
